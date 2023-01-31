@@ -65,10 +65,10 @@ So, we need Docker Desktop is used for this. It runs on Apple's own hypervisor(V
 7. run:
    groups -> to see if username is added to the groups
 
-Docker commands:
+# Docker commands:
 
 1. top level commands: ps, run, pull network
-2. docker network **--help**
+2. docker network --help
    This gives subcommands list:
    create
    connect
@@ -111,12 +111,12 @@ docker container run = docker container create + docker container start + (--att
 
     ENTRYPOINT ["/entrypoint.bash"] (what commands should be run by the container)
 
-    # Creating docker image from docker file: docker build
+    ## Creating docker image from docker file: docker build
 
     docker build -t image-tag-name context --file dockerfilename
     By default, it will check for Dockerfile. If you have a different name, you need to specify it using --file/ -f tag.
 
-    ## docker build -t my-first-image .
+    ### docker build -t my-first-image .
 
     Note: docker creates images for each command in the dockerfile. These are called intermediate images. At the end of the Dockerfile, it squashes all these images into a single images.
 
